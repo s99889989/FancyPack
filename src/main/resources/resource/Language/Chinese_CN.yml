@@ -1,0 +1,14 @@
+Language:
+  Reload: '§e[FancyPack] §a重新读取设定档。'
+  ResourcePack:
+    join: "§e[FancyPack] §a服务器资源包将在{time}秒后开始下载和载入。"
+    
+    successfully-loaded: "§e[FancyPack] §a服务器资源包已成功下载并载入。"
+ 
+    download-error-pass: "§e[FancyPack] §a服务器资源包下载失败，请重新登入，尝试重新下载。"
+    download-error: "§e[FancyPack] &a 服务器资源包下载失败，你将在{time}秒后被踢出伺服器。"
+    download-error-kick: "§e[FancyPack] §a因为下载资源包失败，你被踢出伺服器。"
+    
+    kick-pass: "§e[FancyPack] §a你没有同意下载材质包，材质包无法下载。"
+    kick-delay: "§e[FancyPack] §a你没有同意下载材质包，你将在{time}秒后被踢出伺服器。"
+    kick: "§e[FancyPack] §c你被踢出伺服器，因为你没有同意下载材质包。"

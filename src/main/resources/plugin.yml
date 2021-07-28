@@ -1,0 +1,12 @@
+name: FancyPack
+version: @version@
+main: com.daxton.fancypack.FancyPack
+api-version: 1.13
+prefix: FancyPack
+softdepend: [FancyCore]
+authors: [ s99889989 ]
+description: Send resource packs
+commands:
+  fancypack:
+    description: Basic instructions.
+    aliases: fp

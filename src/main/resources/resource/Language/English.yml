@@ -1,0 +1,14 @@
+Language:
+  Reload: '§e[FancyPack] §aRe-read the configuration file.'
+  ResourcePack:
+    join: "§e[FancyPack] §aThe server resource pack will start downloading and loading in {time} seconds."
+    
+    successfully-loaded: "§e[FancyPack] §aThe server resource pack has been successfully downloaded and loaded."
+ 
+    download-error-pass: "§e[FancyPack] §aThe server resource pack download failed. Please log in again and try to download again."
+    download-error: "§e[FancyPack] &a The server resource pack download failed, you will be kicked out of the server in {time} seconds."
+    download-error-kick: "§e[FancyPack] §aYou were kicked out of the server because the download of the resource pack failed."
+    
+    kick-pass: "§e[FancyPack] §aYou did not agree to download the texture pack, the texture pack cannot be downloaded."
+    kick-delay: "§e[FancyPack] §aYou did not agree to download the texture pack, you will be kicked out of the server in {time} seconds."
+    kick: "§e[FancyPack] §cYou were kicked out of the server because you did not agree to download the texture pack."

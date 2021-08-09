@@ -2,13 +2,14 @@ package com.daxton.fancypack.command;
 
 
 import com.daxton.fancypack.FancyPack;
-import com.daxton.fancypack.config.FileConfig;
 import com.daxton.fancypack.task.Reload;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+
+import static com.daxton.fancypack.config.FileConfig.languageConfig;
 
 public class MainCommand implements CommandExecutor {
 
@@ -21,12 +22,11 @@ public class MainCommand implements CommandExecutor {
         if(args[0].equalsIgnoreCase("reload") && args.length == 1) {
             //重新讀取的一些程序
             Reload.execute();
-            String reloadString = FileConfig.languageConfig.getString("Language.Reload");
-            if(sender instanceof Player && reloadString != null){
+            if(sender instanceof Player){
                 Player player = (Player) sender;
-                player.sendMessage(reloadString);
+                player.sendMessage(languageConfig.getString("OpMessage.Reload")+"");
             }
-            FancyPack.fancyPack.getLogger().info(reloadString);
+            FancyPack.fancyPack.getLogger().info(languageConfig.getString("LogMessage.Reload")+"");
         }
 
         return true;

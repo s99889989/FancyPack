@@ -1,14 +1,21 @@
-Language:
+LogMessage:
+  Reload: '§aLeia novamente o arquivo de configuração.'
+  Disable: '§4Desinstalação do FancyPack.'
+  LoadFancyCore: '§aFancyCore carregado.'
+  UnLoadFancyCore:
+    - '§4*** FancyCore não está instalado ou não está habilitado. ***'
+    - '§4*** FancyPack será desativado. ***'
+OpMessage:
   Reload: '§e[FancyPack] §aLeia novamente o arquivo de configuração.'
-  ResourcePack:
-    join: "§e[FancyPack] §aA texture pack do servidor começara a ser instalada e carregada em {time} segundos."
+ResourcePack:
+  join: "§e[FancyPack] §aA texture pack do servidor começara a ser instalada e carregada em {time} segundos."
     
-    successfully-loaded: "§e[FancyPack] §aA texture pack do servidor foi instalada e carregada com sucesso."
+  successfully-loaded: "§e[FancyPack] §aA texture pack do servidor foi instalada e carregada com sucesso."
  
-    download-error-pass: "§e[FancyPack] §aHouve um erro durante o download da texure pack do servidor. Por favor faça novamente o log in e tente outra vez."
-    download-error: "§e[FancyPack] &aHouve um erro durante o download da texure pack do servidor, você será expulso do servidor em {time} segundos."
-    download-error-kick: "§e[FancyPack] §aVocê foi expulso do servidor, pois a instalação da texture pack falhou."
+  download-error-pass: "§e[FancyPack] §aHouve um erro durante o download da texure pack do servidor. Por favor faça novamente o log in e tente outra vez."
+  download-error: "§e[FancyPack] &aHouve um erro durante o download da texure pack do servidor, você será expulso do servidor em {time} segundos."
+  download-error-kick: "§e[FancyPack] §aVocê foi expulso do servidor, pois a instalação da texture pack falhou."
     
-    kick-pass: "§e[FancyPack] §aSe você não aceitar o download da texture pack, a texture pack não será instalada."
-    kick-delay: "§e[FancyPack] §aSe você não aceitar o download da texture pack, você será expulso do servidor em {time} segundos."
-    kick: "§e[FancyPack] §cVocê foi expulso do servidor, por que não aceitou o download da texture pack."
+  kick-pass: "§e[FancyPack] §aSe você não aceitar o download da texture pack, a texture pack não será instalada."
+  kick-delay: "§e[FancyPack] §aSe você não aceitar o download da texture pack, você será expulso do servidor em {time} segundos."
+  kick: "§e[FancyPack] §cVocê foi expulso do servidor, por que não aceitou o download da texture pack."

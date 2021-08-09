@@ -1,14 +1,21 @@
-Language:
+LogMessage:
+  Reload: '§a重新讀取設定檔。'
+  Disable: '§4FancyPack 卸載。'
+  LoadFancyCore: '§aFancyCore 已加載。'
+  UnLoadFancyCore:
+    - '§4*** FancyCore未安裝或未啟用。 ***'
+    - '§4*** FancyPack將被卸載。 ***'
+OpMessage:
   Reload: '§e[FancyPack] §a重新讀取設定檔。'
-  ResourcePack:
-    join: "§e[FancyPack] §a服務器資源包將在{time}秒後開始下載和載入。"
+ResourcePack:
+  join: "§e[FancyPack] §a服務器資源包將在{time}秒後開始下載和載入。"
     
-    successfully-loaded: "§e[FancyPack] §a服務器資源包已成功下載並載入。"
+  successfully-loaded: "§e[FancyPack] §a服務器資源包已成功下載並載入。"
  
-    download-error-pass: "§e[FancyPack] §a服務器資源包下載失敗，請重新登入，嘗試重新下載。"
-    download-error: "§e[FancyPack] &a 服務器資源包下載失敗，你將在{time}秒後被踢出伺服器。"
-    download-error-kick: "§e[FancyPack] §a因為下載資源包失敗，你被踢出伺服器。"
+  download-error-pass: "§e[FancyPack] §a服務器資源包下載失敗，請重新登入，嘗試重新下載。"
+  download-error: "§e[FancyPack] &a 服務器資源包下載失敗，你將在{time}秒後被踢出伺服器。"
+  download-error-kick: "§e[FancyPack] §a因為下載資源包失敗，你被踢出伺服器。"
     
-    kick-pass: "§e[FancyPack] §a你沒有同意下載材質包，材質包無法下載。"
-    kick-delay: "§e[FancyPack] §a你沒有同意下載材質包，你將在{time}秒後被踢出伺服器。"
-    kick: "§e[FancyPack] §c你被踢出伺服器，因為你沒有同意下載材質包。"
+  kick-pass: "§e[FancyPack] §a你沒有同意下載材質包，材質包無法下載。"
+  kick-delay: "§e[FancyPack] §a你沒有同意下載材質包，你將在{time}秒後被踢出伺服器。"
+  kick: "§e[FancyPack] §c你被踢出伺服器，因為你沒有同意下載材質包。"

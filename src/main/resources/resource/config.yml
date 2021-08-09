@@ -2,6 +2,12 @@
 #Language (English,Chinese_TW,Chinese_CN,Portuguese_BR,Korean_KR)
 Language: English
 
+#建立簡易材質包
+#Create a simple texture pack.
+ResourcePackCreate:
+  enable: false
+  PackName: 'ExamplePack'
+
 #材質包設定
 #Texture Pack Settings
 ResourcePack:

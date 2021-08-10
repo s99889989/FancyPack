@@ -9,4 +9,4 @@ description: Send resource packs
 commands:
   fancypack:
     description: Basic instructions.
-    aliases: fp
+    aliases: fpack

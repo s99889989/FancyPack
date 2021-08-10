@@ -6,7 +6,7 @@ Language: English
 #Create a simple texture pack.
 ResourcePackCreate:
   enable: false
-  PackName: 'ExamplePack'
+  FontCharsStart: '4000'
 
 #材質包設定
 #Texture Pack Settings

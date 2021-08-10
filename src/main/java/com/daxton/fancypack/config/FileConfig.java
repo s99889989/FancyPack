@@ -32,9 +32,9 @@ public class FileConfig {
         if(languageConfig == null){
             languageConfig = FileConfig.config_Map.get("Language/English.yml");
         }
-        if(resourcePackConfig.contains("ResourcePackCreate.PackName")){
-            packName = resourcePackConfig.getString("ResourcePackCreate.PackName");
-        }
+//        if(resourcePackConfig.contains("ResourcePackCreate.PackName")){
+//            packName = resourcePackConfig.getString("ResourcePackCreate.PackName");
+//        }
     }
     //重新讀取設定檔
     public static void reload(){

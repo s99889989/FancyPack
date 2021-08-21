@@ -1,7 +1,7 @@
 package com.daxton.fancypack.gui.button.font;
 
 import com.daxton.fancycore.api.gui.GuiAction;
-import com.daxton.fancycore.api.task.CopyClipboard;
+import com.daxton.fancycore.other.task.CopyClipboard;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
 

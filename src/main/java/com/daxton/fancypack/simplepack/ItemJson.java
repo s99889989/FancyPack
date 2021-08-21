@@ -15,12 +15,13 @@ public class ItemJson {
 		PackManager.item_Item_Map.clear();
 
 		PackManager.item_List.forEach(itemPath->{
+
 			String itemPatch = itemPath.replace(".png", "");
-			String[] strings = itemPatch.split("/");
+			String[] strings = itemPatch.split("\\|");
 			if(strings.length == 2){
 				String key = strings[0];
 				String value = strings[1];
-
+				//FancyPack.fancyPack.getLogger().info(key+" : "+value);
 				//物品數量
 				if(PackManager.item_Count_Map.get(key) != null){
 					int amount = PackManager.item_Count_Map.get(key);

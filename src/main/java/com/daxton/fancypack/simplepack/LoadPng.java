@@ -22,6 +22,9 @@ public class LoadPng {
 					String dest = source.replace("PackConfig/Font", "FancyTexture/assets/minecraft/textures/font");
 					String jsonPath = dest.substring(dest.indexOf("font/")+5);
 					PackManager.font_List.add(jsonPath);
+					if(dest.contains("{") && dest.contains("}")){
+						dest = dest.substring(0, dest.indexOf("{"))+".png";
+					}
 					FileCopy.filePluginFile(fancyPack, source, dest);
 					//FancyPack.fancyPack.getLogger().info(source);
 					//FancyPack.fancyPack.getLogger().info(dest);
@@ -32,6 +35,7 @@ public class LoadPng {
 					String dest = source.replace("PackConfig/Item", "FancyTexture/assets/minecraft/textures/item");
 					String jsonPath = dest.substring(dest.indexOf("item/")+5);
 					if(jsonPath.endsWith(".png")){
+						jsonPath = jsonPath.replaceFirst("/","|");
 						PackManager.item_List.add(jsonPath);
 					}
 					FileCopy.filePluginFile(fancyPack, source, dest);

@@ -1,18 +1,15 @@
 package com.daxton.fancypack.gui.button.font;
 
-import com.daxton.fancycore.api.gui.GUI;
-import com.daxton.fancycore.api.gui.GuiAction;
+import com.daxton.fancycore.api.gui.button.GuiAction;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
 
 public class PreviousFontButton implements GuiAction {
 
 	private final FontButton fontButton;
-	private final GUI gui;
 
-	public PreviousFontButton(FontButton fontButton, GUI gui){
+	public PreviousFontButton(FontButton fontButton){
 		this.fontButton = fontButton;
-		this.gui = gui;
 	}
 
 	//上一頁
@@ -20,7 +17,6 @@ public class PreviousFontButton implements GuiAction {
 		if(clickType == ClickType.LEFT){
 			fontButton.page -= 1;
 			fontButton.page();
-			//gui.open(gui);
 		}
 	}
 

@@ -1,6 +1,6 @@
 package com.daxton.fancypack.gui.button;
 
-import com.daxton.fancycore.api.gui.GuiAction;
+import com.daxton.fancycore.api.gui.button.GuiAction;
 import com.daxton.fancycore.other.task.CopyClipboard;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;

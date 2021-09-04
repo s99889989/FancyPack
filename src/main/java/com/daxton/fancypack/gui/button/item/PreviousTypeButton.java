@@ -1,17 +1,14 @@
 package com.daxton.fancypack.gui.button.item;
 
-import com.daxton.fancycore.api.gui.GUI;
-import com.daxton.fancycore.api.gui.GuiAction;
+import com.daxton.fancycore.api.gui.button.GuiAction;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
 
 public class PreviousTypeButton implements GuiAction {
 
-	private final GUI gui;
 	private final ItemTypeButton itemTypeButton;
 
-	public PreviousTypeButton(ItemTypeButton itemTypeButton, GUI gui){
-		this.gui = gui;
+	public PreviousTypeButton(ItemTypeButton itemTypeButton){
 		this.itemTypeButton = itemTypeButton;
 	}
 

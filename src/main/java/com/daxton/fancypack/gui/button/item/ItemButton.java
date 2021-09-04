@@ -1,7 +1,9 @@
 package com.daxton.fancypack.gui.button.item;
 
 import com.daxton.fancycore.api.gui.GUI;
-import com.daxton.fancycore.api.gui.GuiAction;
+import com.daxton.fancycore.api.gui.button.GuiAction;
+import com.daxton.fancycore.api.gui.button.GuiButton;
+import com.daxton.fancycore.api.gui.item.GuiItem;
 import com.daxton.fancycore.api.item.CItem;
 import com.daxton.fancypack.config.FileConfig;
 import com.daxton.fancypack.gui.button.GetItemButton;
@@ -13,6 +15,8 @@ import org.bukkit.event.inventory.InventoryAction;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.daxton.fancypack.config.FileConfig.languageConfig;
 
 public class ItemButton implements GuiAction {
 
@@ -38,8 +42,8 @@ public class ItemButton implements GuiAction {
 
 	public void page(){
 		FileConfiguration config = FileConfig.config_Map.get("PackConfig/Item/item.yml");
-		gui.clearFrom(19, 54);
-		List<Integer> ignore = new ArrayList<>();
+		gui.clearButtonFrom(19, 54);
+		Integer[] ignore = new Integer[]{};
 
 		List<String> itemList = Lists.newArrayList(config.getConfigurationSection(itemType).getKeys(false));
 
@@ -58,7 +62,11 @@ public class ItemButton implements GuiAction {
 		List<String> loreList= new ArrayList<>();
 		loreList.add("§f("+(page+1)+"/"+(max+1)+")");
 		ccItem.setLore(loreList);
-		gui.setItem(ccItem.getItemStack(), false, 2, place);
+
+		GuiButton packButton = GuiButton.ButtonBuilder.getInstance().
+			setItemStack(ccItem.getItemStack()).
+			build();
+		gui.setButton(packButton, 2, place);
 
 		for(int i = page*36; i< itemList.size(); i++){
 
@@ -76,10 +84,27 @@ public class ItemButton implements GuiAction {
 				}
 			}
 			cItem.setLore(stringList);
-			gui.addItem(cItem.getItemStack(), false, 19, 54, ignore);
-			gui.addAction(new GetItemButton(player, cItem.getItemStack()), 19, 54, ignore);
-			gui.setAction(new PreviousItemButton(this, gui), 1, 7);
-			gui.setAction(new NextItemButton(this, gui), 1, 8);
+
+			GuiButton getItemButton = GuiButton.ButtonBuilder.getInstance().
+				setItemStack(cItem.getItemStack()).
+				setGuiAction(new GetItemButton(player, cItem.getItemStack())).
+				build();
+			gui.addButton(getItemButton, 19, 54, ignore);
+
+			GuiButton previousItemButton = GuiButton.ButtonBuilder.getInstance().
+				setItemStack(GuiItem.valueOf(languageConfig,"Gui.PreviousItemPage")).
+				setGuiAction(new PreviousItemButton(this)).
+				build();
+
+			gui.setButton(previousItemButton, 1, 7);
+
+			GuiButton nextItemButton = GuiButton.ButtonBuilder.getInstance().
+				setItemStack(GuiItem.valueOf(languageConfig,"Gui.NextItemPage")).
+				setGuiAction(new NextItemButton(this)).
+				build();
+
+			gui.setButton(nextItemButton, 1, 8);
+
 		}
 
 	}
